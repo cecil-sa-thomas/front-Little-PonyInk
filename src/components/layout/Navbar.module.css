@@ -1,0 +1,152 @@
+*{
+    color: white;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 56px;
+    padding-right: 56px;
+    height: 68px;
+    background: var(--plum-mid);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,148,90,0.12);
+}
+
+.navLogo {
+    font-size: 30px;
+}
+
+.navInsta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 1. Styles de base */
+.navList {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    justify-content: center;     /* centre dans sa colonne */
+}
+
+.navList li{
+    position: relative;
+    transition: color .25s;
+    padding-bottom: 4px;
+}
+
+.navList li::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 0;           /* invisible par défaut */
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.navList li:hover::after{
+    width: 100%;
+}
+
+.instagram {
+    display: flex;
+    justify-content: flex-end; /* pousse à droite dans sa colonne */
+    text-transform:none;
+    color: var(--blush) ;
+    border: 1px solid #b8889a6e;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: all .3s;
+}
+
+.instagram:hover {
+    background-color: var(--rose) ;
+    border: solid 0.1px var(--rose) ;
+    color: var(--cream);
+}
+
+.navBurger{
+    display: none;
+}
+
+/* Affichage SVG */
+.icon {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    
+    .nav{
+        padding-right: 6px;
+        padding-left: 16px;
+    }
+
+    .navLogo {
+        font-size: 10px;
+    }
+
+    .navList a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navBurger{
+        display: block;
+    }
+
+    .burger{
+        font-size: 30px;
+        margin-left: auto;
+        z-index: 201;
+    }
+
+    /* 2. Modificateurs .list—*/
+    .listClosed {
+        display: none;
+    }
+    /* 2. Modificateurs .list—  */
+    .listOpen{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        gap: 0px;
+        background-color: var(--plum-light); /* même couleur que la navbar */
+
+
+        padding-left: 1px;
+        padding-right: 5px;
+        padding-top: 5px ;
+        padding-bottom: 5px ;
+
+    }
+
+    .navList li{
+        width: 200px;
+        padding: 15px;
+        margin-bottom: 0.3px;
+        margin-left: 10px;
+        margin-right: 5px;
+        font-size: 20px;
+    }
+
+    .icon {
+        display: block;
+    }
+
+}

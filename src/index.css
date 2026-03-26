@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:ital,wght@0,300;0,400;1,300&family=Josefin+Sans:wght@100;300;400&display=swap');
+@import "tailwindcss";
+
+:root {
+    /* Couleurs */
+    --plum-deep:   #1c1418;
+    --plum-mid:    #452833;
+    --plum-light:  #572c42;
+    --rose:        #855369;
+    --blush:       #b8889a;
+    --cream:       #ede4dc;
+    --warm-white:  #f7f0e8;
+    --gold:        #b8945a;
+    --gold-pale:   #d4b47a;
+    --charcoal:    #110e10;
+    --soft-pink: #f1c5d6 ;
+
+    /* Typographie */
+    --font-title: 'Cinzel', serif;
+    --font-link: 'Josefin Sans', sans-serif;
+    --font-body: 'Calibri', sans-serif;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps du document */
+body {
+    font-family: var(--font-body);
+    background-color: var(--plum-deep);
+    color: var(--cream);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6, span {
+    font-family: var(--font-title);
+    color: var(--soft-pink);
+}
+
+/* Liens */
+a {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(237,228,220,0.6);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--gold);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Listes */
+ul, ol {
+    list-style: none;
+}
+
+/* Boutons */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}

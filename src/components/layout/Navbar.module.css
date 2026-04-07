@@ -12,7 +12,7 @@
     align-items: center;
     padding-left: 56px;
     padding-right: 56px;
-    height: 68px;
+    height: var(--nav-height);
     background: var(--plum-mid);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(184,148,90,0.12);
@@ -20,6 +20,8 @@
 
 .navLogo {
     font-size: 30px;
+    font-family: var(--font-title);
+    color: var(--soft-pink);
 }
 
 .navInsta {
@@ -86,7 +88,7 @@
     display: none;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:900px) {
     
     .nav{
         padding-right: 6px;

@@ -13,15 +13,17 @@ export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Accueil/>}/>
-        <Route path='/flash-reserver' element={<FlashReserver/>}/>
-        <Route path='/flash-galerie' element={<FlashGalerie/>}/>
-        <Route path='/projet-sur-mesure' element={<ProjetSurMesure/>}/>
-        <Route path='/faq' element={<Faq/>}/>
-        <Route path='/mentions-legales' element={<MentionsLegales/>}/>
-        <Route path='/politique-confidentialite' element={<PolitiqueConfidentialite/>}/>
-      </Routes>
+      <main className="mainContent">
+        <Routes>
+          <Route path='/' element={<Accueil/>}/>
+          <Route path='/flash-reserver' element={<FlashReserver/>}/>
+          <Route path='/flash-galerie' element={<FlashGalerie/>}/>
+          <Route path='/projet-sur-mesure' element={<ProjetSurMesure/>}/>
+          <Route path='/faq' element={<Faq/>}/>
+          <Route path='/mentions-legales' element={<MentionsLegales/>}/>
+          <Route path='/politique-confidentialite' element={<PolitiqueConfidentialite/>}/>
+        </Routes>
+      </main>
       <Footer />
     </BrowserRouter>
   )

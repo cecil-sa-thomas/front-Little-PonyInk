@@ -1,0 +1,62 @@
+footer{
+    width: 100%;
+    background-color: blue;
+}
+
+.footerTop{
+    background-color: var(--plum-deep);
+    display: flex;
+    gap: 10rem;
+    padding: 4rem;
+}
+
+/* à revoir */
+span {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footerContact li{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footerContact li a {
+    align-items: center;
+    display: flex;
+    text-transform: none;
+    letter-spacing: normal;
+    color: inherit;
+    font-weight: inherit;
+    font-family: unset;
+    gap: 0.5rem;
+}
+
+.footerBottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    background-color: var(--plum-deep);
+}
+
+.footerBottom a,
+.footerBottom p {
+    font-family: var(--font-link);
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: none;
+    color: rgba(237,228,220,0.6);
+}
+
+
+@media (max-width: 850px) {
+    .footerBottom {
+        gap: 5rem;
+    }
+}
+

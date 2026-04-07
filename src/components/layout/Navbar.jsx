@@ -37,7 +37,7 @@ export default function Navbar (){
         <nav className={styles.nav}>
             <div>
                 <a className={styles.navLogo} href="placeholder" target="_blank" rel="noreferrer">
-                    <span>Little PonyInk</span>
+                    Little PonyInk
                 </a>
             </div>
             <ul ref={navListRef}  className={`${styles.navList} ${isOpen ? styles.listOpen : styles.listClosed}`}>

@@ -1,0 +1,61 @@
+
+.hero{
+    background-color: var(--rose);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+
+}
+
+.tag{
+    color: var(--warm-white);
+    font-family: var(--font-link);
+    letter-spacing: 0.2em;
+    font-size: 20px  ;
+    font-weight: 100;
+    border: solid 0.1px var(--gold-pale);
+    padding: 1rem 7rem;
+    display: inline-block;
+    width: fit-content;
+}
+
+.titleDiv{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.title{
+    color: var(--warm-white);
+    font-size: 100px ;
+    font-weight: 800 ;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.titleAccent{
+    color: var(--gold-pale);
+    font-size: 100px ;
+    font-weight: 800 ;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.subTitle{
+    font-family: var(--font-title);
+    font-size: 36px;
+    color: var(--gold-pale);
+}
+
+.description{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.description p{
+    font-size: 25px;
+    color: var(--warm-white);
+}

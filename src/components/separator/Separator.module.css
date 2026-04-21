@@ -2,18 +2,19 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: center;
+    width: 100%;
 }
 
 .separator_line {
-    flex: 1;
     height: 1px;
-    background: var(--blush);
     display: block;
 }
 
 .separator_ornament {
-    color: var(--blush);
     font-size: 10px;
     flex-shrink: 0;
     line-height: 1;
+    padding-left: 50px;
+    padding-right: 50px;
 }

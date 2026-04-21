@@ -30,7 +30,7 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
-        <Separator/>
+        <Separator />
         <div className={styles.footerBottom}>
             <p>&copy; 2026 Little Pony Ink</p>
             <a href="#">Mentions légales</a>

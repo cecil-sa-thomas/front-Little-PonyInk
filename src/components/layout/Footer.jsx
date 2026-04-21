@@ -2,6 +2,7 @@ import styles from './Footer.module.css'
 import { FaInstagram } from "react-icons/fa";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import Separator from '../separator/Separator'
 
 export default function Footer() {
     return (
@@ -29,6 +30,7 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
+        <Separator/>
         <div className={styles.footerBottom}>
             <p>&copy; 2026 Little Pony Ink</p>
             <a href="#">Mentions légales</a>

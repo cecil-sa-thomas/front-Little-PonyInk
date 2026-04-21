@@ -1,6 +1,6 @@
 footer{
     width: 100%;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0);
 }
 
 .footerTop{
@@ -10,8 +10,7 @@ footer{
     padding: 4rem;
 }
 
-/* à revoir */
-span {
+.footerTop span {
     display: block;
     margin-bottom: 1rem;
 }

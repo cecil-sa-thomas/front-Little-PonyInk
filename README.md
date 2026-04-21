@@ -1,21 +1,40 @@
-# React + Vite
+# Little Pony Ink – Site vitrine de tatouage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet de site vitrine réalisé pour @littleponyink.
 
-Currently, two official plugins are available:
+## 1. Aperçu
+Site vitrine permettant aux clients d’avoir une vue d’ensemble du travail de l’artiste,
+de consulter un catalogue (flash) et de prendre rendez-vous pour un tatouage personnalisé ou un flash.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 2. Tech
 
-## React Compiler
+- React
+- Vite
+- CSS
+- API de mailing (à venir)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3. Installation
+```bash
+npm install
+```
+## 4. Lancer le projet
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## 5. Architecture (à mettre à jour)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+├── assets/             # Images / ressources
+├── components/
+│   ├── layout/         # Navbar, Footer, styles globaux
+│   └── ui/svg/         # Icônes JSX
+├── pages/              # Pages de l’application
+└── App.jsx             # Point d’entrée
+```
 
 
-## Lancer le projet
+## Library
 
--> npm run dev
+react-icons/io

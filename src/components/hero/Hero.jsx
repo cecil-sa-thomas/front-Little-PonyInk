@@ -1,5 +1,6 @@
 import styles from './Hero.module.css'
 import Separator from '../separator/Separator'
+import ButtonLink from '../buttons/buttonLink'
 
 export default function Hero({ tag, title, titleAccent, subTitle, description, cta }) {
     return (
@@ -40,13 +41,12 @@ export default function Hero({ tag, title, titleAccent, subTitle, description, c
             {cta && (
                 <div className={styles.ctaGroup}>
                     {cta.map((btn) => (
-                        <a
+                        <ButtonLink
                             key={btn.label}
+                            label={btn.label}
                             href={btn.href}
-                            className={styles[btn.variant]}
-                        >
-                            {btn.label}
-                        </a>
+                            variant={btn.variant}
+                        />
                     ))}
                 </div>
             )}

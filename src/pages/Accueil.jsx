@@ -11,8 +11,8 @@ export default function Accueil() {
                         "Chaque tatouage est pensé pour durer et vous ressembler."
                     ]}
                     cta={[
-                        { label: "VOIR LA GALERIE", href: "#galerie", variant: "secondary" },
-                        { label: "PRENDRE RDV", href: "#contact", variant: "primary" }
+                        { label: "VOIR LA GALERIE", href: "#galerie", variant: "primary" },
+                        { label: "PRENDRE RDV", href: "#contact", variant: "secondary" }
                     ]}
                 />
     )

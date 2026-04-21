@@ -1,0 +1,31 @@
+.btn{
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.primary{
+    background-color: var(--soft-pink);
+    color: black
+}
+
+.primary:hover{
+    background-color: var(--softer-pink);
+    color: black;
+}
+
+.secondary{
+    border: solid 0.1px var(--warm-white);
+    color: white;
+}
+
+.secondary:hover{
+    border: solid 0.1px var(--gold-pale);
+    color: var(--gold-pale);
+}
+
+.accent{
+    background-color: var(--gold-pale);
+}

@@ -1,0 +1,33 @@
+.about {
+    background-color: var(--plum-deep);
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 15rem 10rem;
+}
+
+.about .content{
+    margin-bottom: 50px;
+}
+
+.about .content p{
+    font-family: var(--font-content);
+    font-size: 18px;
+}
+
+.about .content span{
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    font-family: var(--font-content);
+    letter-spacing: normal;
+}
+
+@media (max-width: 1368px) {
+    .about {
+        grid-template-columns: 1fr;
+        margin: 20px;
+        padding: 3rem 1.5rem;
+    }
+}

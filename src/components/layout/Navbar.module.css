@@ -16,6 +16,8 @@
     background: var(--plum-mid);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(184,148,90,0.12);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
 }
 
 .navLogo {

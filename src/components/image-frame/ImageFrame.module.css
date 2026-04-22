@@ -1,0 +1,23 @@
+.frame {
+    position: relative;
+    width: fit-content;
+    width: 700px;
+    height: 930px;
+}
+
+.frame::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--rose);
+    z-index: 0;
+}
+
+.frame img {
+    position: relative;
+    z-index: 1;
+    display: block;
+}

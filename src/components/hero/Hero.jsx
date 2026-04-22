@@ -2,9 +2,14 @@ import styles from './Hero.module.css'
 import Separator from '../separator/Separator'
 import ButtonLink from '../buttons/buttonLink'
 
-export default function Hero({ tag, title, titleAccent, subTitle, description, cta }) {
+export default function Hero({ tag, title, titleAccent, subTitle, description, cta, radialColor, baseFrom, baseTo }) {
+    const background = [
+        `radial-gradient(circle at 50% 50%, ${radialColor}, transparent 100%)`,
+        `linear-gradient(to bottom, ${baseFrom}, ${baseTo})`
+    ].join(", ");
+
     return (
-        <section className={styles.hero}>
+    <section className={styles.hero} style={{ background }}>
 
             {/* Appel du composant Hero
                 <Hero

@@ -1,5 +1,5 @@
 .hero{
-    background-color: var(--rose);
+    /*background-color: var(--rose);*/
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -18,7 +18,7 @@
     font-size: 20px  ;
     font-weight: 100;
     border: solid 0.1px var(--gold-pale);
-    padding: 1rem 7rem;
+    padding: 0.5rem 7rem;
     display: inline-block;
     width: fit-content;
 }
@@ -48,6 +48,8 @@
     font-family: var(--font-title);
     font-size: 36px;
     color: var(--gold-pale);
+    letter-spacing: 0.2em;
+    font-weight: 100;
 }
 
 .description{
@@ -57,4 +59,9 @@
 .description p{
     font-size: 25px;
     color: var(--warm-white);
+}
+
+.ctaGroup{
+    display: flex;
+    gap: 3rem;
 }

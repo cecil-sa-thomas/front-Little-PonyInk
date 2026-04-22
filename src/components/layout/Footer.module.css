@@ -13,6 +13,8 @@ footer{
 .footerTop span {
     display: block;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
 }
 
 .footerContact li{

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:ital,wght@0,300;0,400;1,300&family=Josefin+Sans:wght@100;300;400&display=swap');
-@import "tailwindcss";
 
 :root {
     /* Couleurs */
@@ -20,6 +19,7 @@
     --font-title: 'Cinzel', serif;
     --font-link: 'Josefin Sans', sans-serif;
     --font-body: 'Calibri', sans-serif;
+    --font-content: 'Lato', sans-serif;
 
     /* Position du contenue relatif à la taille de <nav> */
     --nav-height: 68px;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6, span {
 }
 
 span{
-    font-family: var(--font-link);
+    font-family: var(--font-title);
     color: var(--gold);
     letter-spacing: 0.12em;
     font-size: 12px;
@@ -54,11 +54,8 @@ span{
 
 /* Liens */
 a, p  {
-    font-family: var(--font-ui);
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
     color: rgba(237,228,220,0.6);
     text-decoration: none;
 }
@@ -83,7 +80,6 @@ button {
     cursor: pointer;
     border: none;
     background: none;
-    font-family: inherit;
 }
 
 .mainContent{

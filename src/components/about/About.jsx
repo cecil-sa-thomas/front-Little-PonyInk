@@ -9,7 +9,7 @@ export default function About() {
         <section>
             <div className={styles.about}>
                 <div className={styles.colum_image}>
-                    <ImageFrame src={artistePhoto} alt="placeholder"/>
+                    <ImageFrame src={artistePhoto} alt="{alt}"  onError={(e) => e.target.src = 'https://placehold.co/400x500'}/>
                 </div>
                 <div className={styles.colum_text}>
                     <TitleSection tag="studio" title="Présentation" />

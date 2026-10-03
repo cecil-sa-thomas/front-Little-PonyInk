@@ -1,5 +1,5 @@
 import ButtonLink from "../../buttons/buttonLink"
-import ImageFrame from "../../image-frame/ImageFrame"
+import ImageFrame from "./image-frame/ImageFrame"
 import TitleSection from "../../title-section/TitleSection"
 import styles from './Presentation.module.css'
 import artistePhoto from '../../../assets/images/pic-test-deb.png'

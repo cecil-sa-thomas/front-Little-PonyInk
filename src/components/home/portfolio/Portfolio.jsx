@@ -11,13 +11,12 @@ import image6 from '../../../assets/images/carousel/images6.jpg'
 
 export default function Portfolio(){
 
-    //1.L'état
-    const [index, setIndex] = useState(0)
-
-    // 2. Tes images
+    // 1. Tes images à afficher.
     const images = [
         image1, image2, image3, image4, image5, image6
     ]
+    //2.L'état, on démarre au milieu de la file
+    const [index, setIndex] = useState(Math.floor(images.length / 2))
 
     // 3. Les fonctions
     const next = () => setIndex((index + 1) % images.length)
@@ -28,9 +27,10 @@ export default function Portfolio(){
             <div className={styles.portfolio}>
                 <TitleSection tag="portfolio" title="Flash & Projets personnalisés" />
                 <div className={styles.carousel}>
+                    {/* Le décalage est calculé en CSS à partir de --index et de la largeur d'une slide */}
                     <div
                         className={styles.inner}
-                        style={{ transform: `translateX(-${index * 33.33}%)` }}
+                        style={{ '--index': index }}
                     >
                         {images.map((img, i) => (
                             <div key={i} className={`${styles.slide} ${i === index ? styles.active : styles.inactive}`}>
@@ -38,8 +38,8 @@ export default function Portfolio(){
                             </div>
                         ))}
                     </div>
-                    <button onClick={prev}>←</button>
-                    <button onClick={next}>→</button>
+                    <button className={`${styles.arrow} ${styles.prev}`} onClick={prev} aria-label="Image précédente">←</button>
+                    <button className={`${styles.arrow} ${styles.next}`} onClick={next} aria-label="Image suivante">→</button>
                 </div>
             </div>
         </section>

@@ -4,11 +4,14 @@
 }
 
 .carousel {
+    /* Largeur d'une slide : 3 visibles sur desktop */
+    --slide-size: 33.333%;
+
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 500px;  /* Augmente la hauteur pour images plus grandes */
-    max-width: 500%;
+    height: 500px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -16,12 +19,15 @@
     display: flex;
     transition: transform 0.3s ease-in-out;
     height: 100%;
-    width: 1500px;
-    margin-left: 33.33%;
+    /* Même largeur que le carrousel : toutes les % sont relatives à la même base */
+    width: 100%;
+    /* Centre la slide active */
+    margin-left: calc((100% - var(--slide-size)) / 2);
+    transform: translateX(calc(var(--index) * var(--slide-size) * -1));
 }
 
 .slide {
-    flex: 0 0 33.33%;
+    flex: 0 0 var(--slide-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +51,9 @@
     opacity: 1;
 }
 
-button {
+/* Classes dédiées : un sélecteur "button" dans un .module.css n'est PAS scopé
+   et s'appliquait à tous les boutons du site */
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -58,10 +66,71 @@ button {
     z-index: 10;
 }
 
-button:first-of-type {
+.prev {
     left: 20px;
 }
 
-button:last-of-type {
+.next {
     right: 20px;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    .portfolio {
+        padding: 5rem 5rem;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        padding: 3rem 2rem;
+    }
+
+    /* Une seule slide principale, les voisines dépassent légèrement sur les côtés */
+    .carousel {
+        --slide-size: 70%;
+        height: 380px;
+    }
+
+    .slide {
+        padding: 0 8px;
+    }
+
+    .arrow {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .prev {
+        left: 8px;
+    }
+
+    .next {
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio {
+        padding: 2rem 1rem;
+    }
+
+    .carousel {
+        --slide-size: 80%;
+        height: 340px;
+    }
+
+    .slide {
+        padding: 0 5px;
+    }
+
+    .arrow {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
 }

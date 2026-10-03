@@ -1,6 +1,4 @@
-*{
-    color: white;
-}
+
 .nav {
     position: fixed;
     top: 0;
@@ -17,7 +15,6 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(184,148,90,0.12);
     letter-spacing: 0.22em;
-    text-transform: uppercase;
 }
 
 .navLogo {
@@ -37,7 +34,8 @@
     display: flex;
     gap: 50px;
     list-style: none;
-    justify-content: center;     /* centre dans sa colonne */
+    justify-content: center;    /* centre dans sa colonne */
+        text-transform: uppercase;
 }
 
 .navList li{
@@ -98,7 +96,12 @@
     }
 
     .navLogo {
-        font-size: 10px;
+        font-size: 18px;
+    }
+
+    /* Instagram masqué sur mobile pour laisser la place au burger */
+    .navInsta {
+        display: none;
     }
 
     .navList {
@@ -112,12 +115,28 @@
     }
 
     .navBurger{
-        display: block;
+        display: flex;          /* l'icône Instagram et le burger côte à côte */
+        align-items: center;
+        gap: 12px;
+        margin-left: auto; /* pousse le burger tout à droite, quelle que soit la largeur d'écran */
+    }
+
+    .instaMobile{
+        display: flex;          /* évite un petit décalage vertical de l'icône */
+    }
+
+    .instaMobile svg{
+        transition: fill 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Au survol : l'icône passe en doré et grossit légèrement */
+    .instaMobile:hover svg{
+        fill: var(--gold);
+        transform: scale(1.1);
     }
 
     .burger{
         font-size: 30px;
-        margin-left: 500px;
         z-index: 100;
         background-color: rgba(255, 255, 255, 0);
     }
@@ -126,7 +145,6 @@
     .listClosed {
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease-in-out;
         position: absolute;
         top: 0%;
         right: 0%;
@@ -140,7 +158,7 @@
         flex-direction: column;
         align-items: flex-end;
         position: absolute;
-        top: 0%;
+        top: var(--nav-height); /* s'ouvre SOUS la barre, sans recouvrir le burger */
         right: 0%;
         gap: 0px;
         background-color: var(--plum-light);

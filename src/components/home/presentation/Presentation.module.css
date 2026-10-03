@@ -32,7 +32,38 @@
 @media (max-width: 1368px) {
     .about {
         grid-template-columns: 1fr;
+        gap: 3rem;
         margin: 20px;
         padding: 3rem 1.5rem;
+    }
+
+    /* Le texte passe avant l'image dans l'ordre de défilement */
+    .about .colum_text {
+        order: 1;
+        margin-left: 0;
+    }
+
+    .about .colum_image {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        /* compense le cadre décalé de -15px pour qu'il ne sorte pas de l'écran */
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .about .colum_image > div {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        margin: 0;
+    }
+
+    .about .content p,
+    .about .content span {
+        font-size: 16px;
     }
 }

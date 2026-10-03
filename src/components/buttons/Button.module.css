@@ -1,7 +1,9 @@
 .btn{
+    display: inline-block;
+    text-align: center;
     padding: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: clamp(24px, 6vw, 60px);
+    padding-right: clamp(24px, 6vw, 60px);
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -31,4 +33,12 @@
 
 .accent{
     background-color: var(--gold-pale);
+}
+
+@media screen and (max-width: 600px) {
+    .btn{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        letter-spacing: 0.15em;
+    }
 }

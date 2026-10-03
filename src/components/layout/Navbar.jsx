@@ -20,10 +20,15 @@ export default function Navbar (){
 
 
     const navListRef = useRef(null)
+    const burgerRef = useRef(null)
 
     // Fermer le menu burger via "ref={menuRef}" à placer dans la bonne balise
     useEffect(() => {
         function handleClickOutside(event) {
+            // Clic sur le bouton burger : ce n'est pas un clic "à l'extérieur", son onClick s'en occupe
+            if (burgerRef.current && burgerRef.current.contains(event.target)) {
+                return
+            }
             // SI (la nav existe) ET (le clic n'est PAS dans la nav) → la variable permettant d'ouvrir le menu devient false
             if (navListRef.current && !navListRef.current.contains(event.target)) {
                 setIsOpen(false)
@@ -84,10 +89,19 @@ export default function Navbar (){
                 </a>
             </div>
             <div className={styles.navBurger}>
+                <a className={styles.instaMobile} href="https://www.instagram.com/littleponyink/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                    <InstagramIcon height={28} width={28} color="var(--blush)"/>
+                </a>
                 <button
+                    ref={burgerRef}
                     className={styles.burger}
-                    onClick={() => setIsOpen(!isOpen)}>
-                    <BurgerIcon className={styles.icon} height={44} width={44} color="var(--soft-pink)"/>
+                    onClick={() => setIsOpen((prev) => !prev)}
+                    aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                    aria-expanded={isOpen}>
+                    {isOpen
+                        ? <CloseIcon className={styles.icon} height={44} width={44} color="var(--soft-pink)"/>
+                        : <BurgerIcon className={styles.icon} height={44} width={44} color="var(--soft-pink)"/>
+                    }
                 </button>
             </div>
         </nav>

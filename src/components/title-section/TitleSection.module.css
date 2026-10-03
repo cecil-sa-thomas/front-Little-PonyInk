@@ -28,6 +28,6 @@
 }
 
 .section_title .title{
-    font-size: 60px;
+    font-size: clamp(1.75rem, 6vw, 60px);
     color: var( --cream);
 }

@@ -11,26 +11,29 @@
 
 }
 
+/* clamp(min, idéal, max) : la taille suit la largeur de l'écran (vw) sans descendre sous min ni dépasser max */
+
 .tag{
     color: var(--warm-white);
     font-family: var(--font-link);
     letter-spacing: 0.2em;
-    font-size: 20px  ;
+    font-size: clamp(12px, 3vw, 20px);
     font-weight: 100;
     border: solid 0.1px var(--gold-pale);
-    padding: 0.5rem 7rem;
+    padding: 0.5rem clamp(1.5rem, 8vw, 7rem);
     display: inline-block;
     width: fit-content;
+    max-width: 100%;
 }
 
 .titleDiv{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: clamp(2rem, 8vw, 5rem);
+    padding-bottom: clamp(2rem, 8vw, 5rem);
 }
 
 .title{
     color: var(--warm-white);
-    font-size: 100px ;
+    font-size: clamp(2.25rem, 9vw, 100px);
     font-weight: 800 ;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -38,7 +41,7 @@
 
 .titleAccent{
     color: var(--gold-pale);
-    font-size: 100px ;
+    font-size: clamp(2.25rem, 9vw, 100px);
     font-weight: 800 ;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -46,22 +49,38 @@
 
 .subTitle{
     font-family: var(--font-title);
-    font-size: 36px;
+    font-size: clamp(1.1rem, 4vw, 36px);
     color: var(--gold-pale);
     letter-spacing: 0.2em;
     font-weight: 100;
 }
 
 .description{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: clamp(2rem, 8vw, 5rem);
+    padding-bottom: clamp(2rem, 8vw, 5rem);
 }
 .description p{
-    font-size: 25px;
+    font-size: clamp(1rem, 3.5vw, 25px);
     color: var(--warm-white);
 }
 
 .ctaGroup{
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 3rem);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+    .hero{
+        padding: 3rem 1.5rem;
+    }
+
+    /* Boutons empilés, centrés, sans toucher les bords */
+    .ctaGroup{
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
 }

@@ -1,6 +1,8 @@
 import Hero from "../components/hero/Hero"
 import Presentation from "../components/home/presentation/Presentation"
 import Portfolio from "../components/home/portfolio/Portfolio"
+import Services from "../components/home/services/Services.jsx"
+
 
 export default function Accueil() {
     return (
@@ -24,6 +26,7 @@ export default function Accueil() {
                     />
             <Presentation />
             <Portfolio />
+            <Services/>
         </>
         
         

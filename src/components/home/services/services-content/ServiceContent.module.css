@@ -1,0 +1,15 @@
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    background-color: black;
+    align-items: flex-start;
+}
+
+.serviceContent p{
+    font-size: 18px;
+    margin-bottom: 2.5rem;   /* ← espace minimum entre le texte et le bouton */
+}

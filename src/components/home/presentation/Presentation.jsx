@@ -1,4 +1,4 @@
-import ButtonLink from "../../buttons/buttonLink"
+import ButtonLink from "../../buttons/ButtonLink"
 import ImageFrame from "./image-frame/ImageFrame"
 import TitleSection from "../../title-section/TitleSection"
 import styles from './Presentation.module.css'
@@ -15,14 +15,16 @@ export default function Presentation() {
                     <TitleSection tag="studio" title="Présentation" />
                     <div className={styles.content}>
                         <p>
-                        Bienvenue dans l'univers de <strong>Little Pony Ink</strong>.
-                        Un studio indépendant dédié aux univers
-                        <span style={{ color: 'var(--gold)' }}> pop culture, manga, dessins animés </span>
-                        et au-delà.
+                            Bienvenue dans l'univers de <strong>Little Pony Ink</strong>.
+                            Un studio indépendant dédié aux univers
+                            <span style={{ color: 'var(--gold)' }}> pop culture, manga, dessins animés </span>
+                            et au-delà.
                         </p>
                         <br />
                         <br />
-                        <p>Du trait fin au plein noir, du flash disponible de suite au projet  ambitieux travaillé ensemble — chaque tatouage est abordé avec soin,  écoute et précision.</p>
+                        <p>Du trait fin au plein noir, du flash disponible de suite au projet  ambitieux travaillé ensemble
+                            — chaque tatouage est abordé avec soin,  écoute et précision.
+                        </p>
                         <br />
                         <br />
                         <p>Parce qu'un bon tatouage, c'est avant tout

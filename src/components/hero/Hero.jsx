@@ -1,6 +1,6 @@
 import styles from './Hero.module.css'
 import Separator from '../separator/Separator'
-import ButtonLink from '../buttons/buttonLink'
+import ButtonLink from '../buttons/ButtonLink'
 
 export default function Hero({ tag, title, titleAccent, subTitle, description, cta, radialColor, baseFrom, baseTo }) {
     const background = [

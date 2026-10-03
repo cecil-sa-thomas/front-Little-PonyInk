@@ -1,4 +1,4 @@
-import styles from './Button.module.css'
+import styles from './ButtonLink.module.css'
 
 export default function ButtonLink({ label, href, variant }) {
     return (

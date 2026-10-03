@@ -4,7 +4,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 15rem 10rem;
+    padding: 8rem 10rem;
+}
+
+.about .colum_text {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .about .content{
@@ -17,7 +22,7 @@
 }
 
 .about .content span{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     text-decoration: none;
     font-family: var(--font-content);

@@ -1,5 +1,6 @@
-import About from "../components/about/About"
 import Hero from "../components/hero/Hero"
+import Presentation from "../components/home/presentation/Presentation"
+import Portfolio from "../components/home/portfolio/Portfolio"
 
 export default function Accueil() {
     return (
@@ -21,7 +22,8 @@ export default function Accueil() {
                         baseFrom= 'var(--blush)'
                         baseTo='var(--rose)'
                     />
-            <About />
+            <Presentation />
+            <Portfolio />
         </>
         
         
